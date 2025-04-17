@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://www.canapea.org/">
+  <title>Canapea Programming Language</title>
+  <meta name="title" content="Canapea">
+  <meta name="description" content="Welcome to the Canapea Programming Language!">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.canapea.org/">
+  <meta property="og:title" content="Canapea Programming Language">
+  <meta property="og:description" content="Welcome to the Canapea Programming Language!">
+  <!-- meta property="og:image" content="https://www.canena.de/blog-placeholder-1.jpg" --> <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.canapea.org/">
+  <meta property="twitter:title" content="Canapea Programming Language">
+  <meta property="twitter:description" content="Welcome to the Canapea Programming Language!">
+  <!-- <meta property="twitter:image" content="https://www.canena.de/blog-placeholder-1.jpg"> -->
+  <style>
+    :root {
+      --font-size: calc(1rem + 0.5vw);
+      font-size: var(--font-size);
+
+      --space: 1.5rem;
+      --measure: 80ch;
+
+      --ratio: 1.5;
+      /* 1.5; 1.61803398875; */
+      --s-5: calc(var(--s-4) / var(--ratio));
+      --s-4: calc(var(--s-3) / var(--ratio));
+      --s-3: calc(var(--s-2) / var(--ratio));
+      --s-2: calc(var(--s-1) / var(--ratio));
+      --s-1: calc(var(--s0) / var(--ratio));
+      --s0: 1rem;
+      --s1: calc(var(--s0) * var(--ratio));
+      --s2: calc(var(--s1) * var(--ratio));
+      --s3: calc(var(--s2) * var(--ratio));
+      --s4: calc(var(--s3) * var(--ratio));
+      --s5: calc(var(--s4) * var(--ratio));
+
+      --min-device-width: 375px; /* iPhone SE */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    * {
+      max-inline-size: var(--measure);
+    }
+
+    *,
+    :after,
+    :before {
+      box-sizing: border-box;
+      border: 0 solid var(--neutral);
+    }
+
+    html {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0 1em;
+      min-width: var(--min-device-width);
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-block-start: 0;
+    }
+
+    h1 {
+      font-size: calc(1.5 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (0 * 0.2 * var(--s0)));
+    }
+
+    h2 {
+      font-size: calc(1 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (1.1 * 0.2 * var(--s0)));
+    }
+
+    h3 {
+      font-size: calc(0.75 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (2.2 * 0.2 * var(--s0)));
+    }
+
+    h4 {
+      font-size: calc(0.65 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (3.3 * 0.2 * var(--s0)));
+    }
+
+    h5 {
+      font-size: calc(0.55 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (4.4 * 0.2 * var(--s0)));
+    }
+
+    h6 {
+      font-size: calc(0.45 * var(--s1));
+      font-weight: bold;
+      margin-bottom: calc(var(--s1) - (5.5 * 0.2 * var(--s0)));
+    }
+
+    ul {
+      align-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      flex-grow: 1;
+    }
+
+    footer {
+      background-color: cornsilk;
+      display: flex;
+      justify-content: center;
+      bottom: 0;
+      margin-left: -1em;
+      margin-right: -1em;
+      padding: 1em;
+      position: fixed;
+      width: 100%;
+    }
+
+    .alert {
+      padding: 1em;
+    }
+
+    .alert-info {
+      background-color: lightblue;
+    }
+
+    .gh {
+      display: inline-flex;
+      padding-left: 0.2em;
+    }
+    .gh svg {
+      transform: scale(0.8);
+    }
+    .gh span {
+      padding-right: 0.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>The Canapea Programming Language</h1>
+  <p>
+    Welcome to the official home of the Canapea Programming Language.
+  </p>
+  <p class="alert alert-info">
+    The language is in early development right now, follow us on Github and stay tuned.
+  </p>
+  <ul>
+    <li>
+      Visit
+      <a class="gh" href="https://github.com/canapea/canapea"
+        title="The Canapea Programming Language on Github (opens in new tab/window)" target="_blank"
+        rel="noopener noreferrer">
+        <span>
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 16 16">
+            <path fill="#333"
+              d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z">
+            </path>
+          </svg>
+        </span>
+        <span>the language repository</a> to see how development is going.</span>
+      </a>
+    </li>
+    <li>
+      Visit
+      <a class="gh" href="https://github.com/canapea"
+        title="The Canapea Programming Language on Github (opens in new tab/window)" target="_blank"
+        rel="noopener noreferrer">
+        <span>
+          <svg aria-hidden="true" width="24" height="24" viewBox="0 0 16 16">
+            <path fill="#333"
+              d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z">
+            </path>
+          </svg>
+        </span>
+        <span>our Github Organization</span>
+      </a>
+      to learn more about the language.
+    </li>
+  </ul>
+  <footer>
+    <a class="gh" href="https://github.com/canapea/canapea"
+      title="The Canapea Programming Language on Github (opens in new tab/window)" target="_blank"
+      rel="noopener noreferrer">
+      <span>
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 16 16">
+          <path fill="#333"
+            d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z">
+          </path>
+        </svg>
+      </span>
+      <span>
+        canapea/canapea
+      </span>
+    </a>
+  </footer>
+</body>
+
+</html>
